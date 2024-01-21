@@ -20,7 +20,7 @@ function Header() {
     },
   ]
   return (
-    <div className="flex items-center w-screen justify-between border-b-[1px]">
+    <div className="flex items-center fixed w-screen justify-between border-b-[1px] bg-white">
       <div className="w-[90px] h-[90px] bg-black">
         <img src="/vite.svg" className="p-[20px] h-[100%]"/>
       </div> 
@@ -33,7 +33,7 @@ function Header() {
           )
         )}
       </div>
-      <div className="w-[90px] h-[90px] bg-red-500 flex justify-center items-center">
+      <div className="w-[90px] h-[90px] bg-red-600 flex justify-center items-center">
         <svg xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
