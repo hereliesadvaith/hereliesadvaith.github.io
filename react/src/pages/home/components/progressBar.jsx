@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 
-function ProgressBar() {
+export default function ProgressBar() {
 
   const [scrollTop, setScrollTop] = useState(0)
 
@@ -29,5 +29,3 @@ function ProgressBar() {
     </div>
   )
 }
-
-export default ProgressBar

@@ -1,30 +1,26 @@
-import "./App.css"
-import Header from "./components/header.jsx" 
-import Sidebar from "./components/sidebar.jsx"
-import ProfilePic from "./components/profilePic.jsx"
-import Introduction from "./components/introduction.jsx"
-import About from "./components/about.jsx"
-import Services from "./components/services.jsx"
-import ProgressBar from "./components/progressBar.jsx"
+import React from "react"
+import { 
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom"
+import Layout from "./pages/layout/main"
+import Home from "./pages/home/main"
+import Portfolio from "./pages/portfolio/main"
+import Blog from "./pages/blog/main"
+import Contact from "./pages/contact/main"
 
-function App() {
-  return (
-    <div className="w-screen">
-      <Header/>
-      <Sidebar/>
-      <div className="ml-[90px] grid gird-cols-1 md:grid-cols-3">
-        <div className="col-span-2 mt-[90px]">
-          <Introduction/>
-          <About/>
-          <Services/>
-        </div>
-        <div className="hidden md:block">
-          <ProgressBar/>
-          <ProfilePic/>
-        </div>
-      </div>
-    </div>
-  )
+export default function App() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="portfolio" element={<Portfolio />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    )
 }
-
-export default App

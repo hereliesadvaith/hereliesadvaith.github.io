@@ -1,6 +1,4 @@
-import React from "react"
-
-function ProfilePic() {
+export default function ProfilePic() {
   return (
     <div className="fixed mt-[90px]">
       <img src="/bgImg.png"
@@ -9,5 +7,3 @@ function ProfilePic() {
     </div>
   )
 }
-
-export default ProfilePic

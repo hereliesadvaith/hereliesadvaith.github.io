@@ -1,6 +1,4 @@
-import React from 'react'
-
-function Introduction() {
+export default function Introduction() {
   return (
     <div className="flex flex-col items-center">
       <div className="h-[120px] border-r-[1px]"/>
@@ -10,5 +8,3 @@ function Introduction() {
     </div>
   )
 }
-
-export default Introduction

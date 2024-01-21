@@ -1,8 +1,7 @@
-import React from "react"
-import Constants from "../shared/constants.jsx"
+import Constants from "../shared/constants"
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi"
 
-function About() {
+export default function About() {
   return (
     <div className="mt-5 flex flex-col items-center">
       <h2 className="text-[36px] font-bold max-w-[700px] text-center">{Constants.ABOUT_HEADING}</h2>
@@ -12,5 +11,3 @@ function About() {
     </div>
   )
 }
-
-export default About
