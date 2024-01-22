@@ -5,3 +5,7 @@
 :root {
     font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+div.menuIconDiv svg {
+    height: 1.7em;
+    width: 1.7em;
+}
