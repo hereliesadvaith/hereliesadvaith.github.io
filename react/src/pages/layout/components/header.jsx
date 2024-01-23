@@ -67,14 +67,16 @@ export default function Header() {
       </div>
     </div>
     <div className="md:hidden items-center fixed w-screen border-b-[1px] bg-white">
-      <div className="flex md:hidden gap-14 h-[45px] justify-evenly items-center text-red-600">
+      <div className="flex md:hidden h-[45px] justify-evenly items-center text-red-600">
         {menu.map(
           (item) => (
-            <Link to={item.href} key={item.id}>
-              <div className="cursor-pointer hover:underline font-medium menuIconDiv">
-                {item.icon}
-              </div>
-            </Link>
+            <div key={item.id} className={`flex w-full h-full justify-center items-center border-b-[4px] ${location.pathname === item.href ? 'border-red-600' : 'border-white'}`}>
+              <Link to={item.href} key={item.id}>
+                <div className="text-3xl">
+                  {item.icon}
+                </div>
+              </Link>
+            </div>
           )
         )}
       </div>
