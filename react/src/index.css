@@ -5,3 +5,6 @@
 :root {
     font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
+.tools img {
+  height: 45px;
+}
