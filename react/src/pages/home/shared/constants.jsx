@@ -1,12 +1,14 @@
 export default {
   ABOUT_HEADING: "Python Developer based in Kerala.",
   ABOUT_DESC: <h3 className="my-5 text-gray-400 text-[22px] max-w-[700px]">
-    Hi Everyone, I am <span className="bg-gradient-to-b from-red-500 to-gray-400 bg-clip-text text-transparent">Advaith </span>
-    from Kerala, India. I am currently employed as a <span className="bg-gradient-to-b from-red-500 to-gray-400 bg-clip-text
-    text-transparent">Python developer</span> at Cybrosys Technologies.<br/><br/>
-    In my free time, I enjoy gaming a little bit and working on personal projects in <span className="bg-gradient-to-b from-red-500 to-gray-400 bg-clip-text text-transparent">Algorithmic trading. </span>
-    I'm excited to start my career in Data Science and continue learning and growing in this field.
-  </h3>,
+                Hi Everyone, I&apos;m
+                <span className="bg-gradient-to-b from-red-500 to-gray-400 bg-clip-text text-transparent"> Advaith
+                </span> from Kerala, India. I&apos;m currently employed as a <span className="bg-gradient-to-b
+                from-red-500 to-gray-400 bg-clip-text text-transparent">Python developer</span> at Cybrosys Technologies.<br/><br/>
+                In my free time, I enjoy gaming a little bit and working on personal projects in
+                <span className="bg-gradient-to-b from-red-500 to-gray-400 bg-clip-text text-transparent"> Algorithmic trading. </span>
+                I&apos;m excited to start my career in Data Science and continue learning and growing in this field.
+              </h3>,
   ABOUT_TOOLS: <div className="tools my-10">
                   <div className="row flex justify-center">
                     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"/>
@@ -20,6 +22,7 @@ export default {
                   <div className="row flex justify-center">
                     <img src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white"/>
                     <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white"/>
+                    <img src="https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white"/>
                     <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white"/>
                   </div> 
                   <div className="row flex justify-center">
@@ -29,6 +32,5 @@ export default {
                   <div className="row flex justify-center">
                     <img src="https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white"/>
                   </div>
-                </div>
-                  
+               </div>                  
 }
