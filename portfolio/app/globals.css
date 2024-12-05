@@ -8,10 +8,13 @@
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1200px;
   --font-primary: "Lexend", sans-serif;
+  --color-primary: #1c1c22;
+  --color-accent-default: #00ff99;
+  --color-accent-hover: #00e187;
 }
 
 @layer base {
   body {
-    @apply font-primary;
+    @apply font-primary bg-primary text-white leading-loose;
   }
 }
