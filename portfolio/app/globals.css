@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -7,7 +7,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1200px;
-  --font-primary: "Lexend", sans-serif;
+  --font-primary: "Ubuntu Mono", monospace;
   --color-primary: #1c1c22;
   --color-accent-default: #00ff99;
   --color-accent-hover: #00e187;
