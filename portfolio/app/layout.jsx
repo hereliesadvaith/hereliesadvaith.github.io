@@ -2,6 +2,7 @@ import "./globals.css";
 
 // Components
 import Header from "../components/Header";
+import PageTransition from "@/components/PageTransition";
 
 export const metadata = {
   title: "hereLiesAdvaith",
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );
