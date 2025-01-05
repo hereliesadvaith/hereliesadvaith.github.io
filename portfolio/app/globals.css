@@ -1,2 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1200px;
+  --font-primary: "Ubuntu Mono", monospace;
+  --color-primary: #1c1c22;
+  --color-accent-default: #00ff99;
+  --color-accent-hover: #00e187;
+}
+
+@layer base {
+  body {
+    @apply font-primary bg-primary text-white leading-loose;
+  }
+}
