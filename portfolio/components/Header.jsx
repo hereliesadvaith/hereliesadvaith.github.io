@@ -7,12 +7,12 @@ import Nav from "@/components/Nav";
 const Header = () => {
   return (
     <header className="py-8 xl:py-12">
-      <div className="container mx-auto">
+      <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="text-4xl font-semibold">
           Advaith<span className="text-accent-default">.</span>
         </Link>
         {/* Desktop Nav */}
-        <div className="hidden xl:flex">
+        <div className="hidden xl:flex itemes-center gap-8">
           <Nav />
           <Link href="/contact">
             <Button>Hire!</Button>
