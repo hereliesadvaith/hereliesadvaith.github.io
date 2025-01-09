@@ -10,3 +10,6 @@ npx shadcn@latest init
 ```bash
 npx shadcn@latest add input button scroll-area select sheet tabs textarea tooltip
 ```
+```bash
+npm i framer-motion
+```
