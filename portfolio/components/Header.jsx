@@ -18,7 +18,7 @@ const Header = () => {
           <Link href="/contact">
             <Button
               variant="outline"
-              className="border-2 border-accent-default cursor-pointer"
+              className="border-2 border-accent-default cursor-pointer hover:bg-accent-default hover:text-primary hover:transition-all duration-500"
             >
               Hire Me!
             </Button>
