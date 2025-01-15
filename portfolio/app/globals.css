@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -9,8 +9,7 @@
   --breakpoint-xl: 1200px;
   --font-primary: "Ubuntu Mono", monospace;
   --color-primary: #1c1c22;
-  --color-accent-default: #00ff99;
-  --color-accent-hover: #00e187;
+  --color-accent-default: #f2aa61;
 }
 
 @layer base {
@@ -18,13 +17,12 @@
     @apply font-primary bg-primary text-white leading-loose;
   }
   .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-bold
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-bold;
   }
   .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-bold
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-bold;
   }
   .h3 {
-    @apply text-[48px] xl:text-[24px] leading-[1.1] font-bold
+    @apply text-[48px] xl:text-[24px] leading-[1.1] font-bold;
   }
-  
 }

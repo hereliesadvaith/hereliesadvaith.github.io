@@ -39,7 +39,7 @@ const Nav = () => {
               link.path === pathname
                 ? "text-accent-default border-b-2 border-accent-default"
                 : ""
-            } capitalize font-medium hover:text-accent-hover transition-all`}
+            } capitalize font-medium hover:text-accent-default transition-all`}
           >
             {link.name}
           </Link>
