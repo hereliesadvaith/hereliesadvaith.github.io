@@ -22,10 +22,11 @@ const Photo = () => {
           className="overflow-hidden rounded-full w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/home/dp.png"
+            src="/assets/home/photo.png"
             priority
             quality={100}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt=""
             className="object-contain"
           />
