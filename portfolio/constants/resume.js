@@ -63,6 +63,11 @@ const experience = {
       position: "Python Developer Trainee",
       duration: "2023",
     },
+    {
+      company: "Baker Academy",
+      position: "Structural Engineer Intern",
+      duration: "2022",
+    },
   ],
 };
 
