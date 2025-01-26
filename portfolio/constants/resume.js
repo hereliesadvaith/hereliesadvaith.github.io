@@ -66,7 +66,7 @@ const experience = {
     {
       company: "Baker Academy",
       position: "Structural Engineer Intern",
-      duration: "2022",
+      duration: "2021",
     },
   ],
 };
@@ -76,7 +76,7 @@ const education = {
   description: "I hold a Bachelor's degree in Civl Engineering.",
   items: [
     {
-      instistution: "Udemy",
+      institution: "Udemy",
       course: "Full-Stack Web Development Bootcamp",
       duration: "2022",
     },
@@ -98,34 +98,34 @@ const skills = {
   description:
     "I have expertise in various programming languages and frameworks.",
   items: [
-    {
-      icon: <SiHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <SiCss3 />,
-      name: "css 3",
-    },
-    {
-      icon: <SiJavascript />,
-      name: "javascript",
-    },
+    // {
+    //   icon: <SiHtml5 />,
+    //   name: "html 5",
+    // },
+    // {
+    //   icon: <SiCss3 />,
+    //   name: "css 3",
+    // },
+    // {
+    //   icon: <SiJavascript />,
+    //   name: "javascript",
+    // },
     {
       icon: <SiPython />,
       name: "python",
     },
-    {
-      icon: <SiGo />,
-      name: "go",
-    },
-    {
-      icon: <SiXml />,
-      name: "xml",
-    },
-    {
-      icon: <SiBootstrap />,
-      name: "bootstrap",
-    },
+    // {
+    //   icon: <SiGo />,
+    //   name: "go",
+    // },
+    // {
+    //   icon: <SiXml />,
+    //   name: "xml",
+    // },
+    // {
+    //   icon: <SiBootstrap />,
+    //   name: "bootstrap",
+    // },
     {
       icon: <SiTailwindcss />,
       name: "tailwind css",
@@ -158,14 +158,14 @@ const skills = {
       icon: <SiPlotly />,
       name: "plotly",
     },
-    {
-      icon: <SiScikitlearn />,
-      name: "scikit-learn",
-    },
-    {
-      icon: <SiMysql />,
-      name: "mysql",
-    },
+    // {
+    //   icon: <SiScikitlearn />,
+    //   name: "scikit-learn",
+    // },
+    // {
+    //   icon: <SiMysql />,
+    //   name: "mysql",
+    // },
     {
       icon: <SiPostgresql />,
       name: "postgresql",
