@@ -42,10 +42,6 @@ const about = {
       fieldName: "Email",
       fieldValue: "hereliesadvaith@gmail.com",
     },
-    {
-      fieldName: "Languages",
-      fieldValue: "English, Malayalam",
-    },
   ],
 };
 
