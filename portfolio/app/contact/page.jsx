@@ -1,11 +1,39 @@
 "use client";
 
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const formRef = useRef();
+  const formSubmit = async () => {
+    const form = formRef.current;
+    const firstName = form.elements["firstname"].value;
+    const lastName = form.elements["lastname"].value;
+    const email = form.elements["email"].value;
+    const phone = form.elements["phone"].value;
+    const message = form.elements["message"].value;
+    if (firstName && email) {
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyzgKF0Mf7H4eKbKBk8SeTLg7vih8JS5pEJ0gDJm28IJUwjJHZlwOH10IeQIcTwEnL6kw/exec";
+      const payload = {
+        message: message,
+        firstName: firstName,
+        lastName: lastName,
+        phone: phone,
+        email: email,
+      };
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+      console.log(result);
+    }
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -19,7 +47,11 @@ const Contact = () => {
         <div className="mx-auto">
           {/* Form */}
           <div className="xl:h-[54%] xl:w-[60%] mx-auto">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              ref={formRef}
+              onSubmit={(e) => e.preventDefault()}
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+            >
               <h3 className="text-4xl text-accent-default">
                 Let's work together
               </h3>
@@ -28,16 +60,37 @@ const Contact = () => {
                 opportunities. Drop a message and I’ll get back to you soon.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="First Name" />
-                <Input type="lastname" placeholder="Last Name" />
-                <Input type="email" placeholder="Email Address" />
-                <Input type="phone" placeholder="Phone Number" />
+                <Input
+                  name="firstname"
+                  type="firstname"
+                  placeholder="First Name"
+                  required
+                />
+                <Input
+                  name="lastname"
+                  type="lastname"
+                  placeholder="Last Name"
+                />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email Address"
+                  required
+                />
+                <Input name="phone" type="phone" placeholder="Phone Number" />
               </div>
-              <Textarea placeholder="Your Message" className="h-[200px]" />
+              <Textarea
+                name="message"
+                placeholder="Your Message"
+                className="h-[200px]"
+              />
               <Button
                 variant="outline"
                 size="lg"
                 className="uppercase border-2 border-accent-default cursor-pointer hover:bg-accent-default hover:text-primary hover:transition-all duration-500 max-w-40"
+                onClick={(e) => {
+                  formSubmit();
+                }}
               >
                 Send Message
               </Button>
