@@ -7,7 +7,7 @@ npx create-next-app@latest .
 npx shadcn@latest init
 ```
 ```bash
-npx shadcn@latest add input button scroll-area select sheet tabs textarea tooltip
+npx shadcn@latest add input button scroll-area select sheet tabs textarea tooltip sonner 
 ```
 ```bash
 npm i framer-motion

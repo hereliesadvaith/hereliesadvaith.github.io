@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -30,7 +31,15 @@ const Contact = () => {
         body: JSON.stringify(payload),
       });
       const result = await response.json();
-      console.log(result);
+      if (result.result === "success") {
+        toast("Success", {
+          description: "Your request was completed successfully.",
+        });
+      } else {
+        toast("Something went wrong.", {
+          description: "Something went wrong please try again.",
+        });
+      }
     }
   };
 
