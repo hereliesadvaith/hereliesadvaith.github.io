@@ -1,7 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
@@ -9,7 +10,9 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   const formRef = useRef();
+  const [loading, setLoading] = useState(false);
   const formSubmit = async () => {
+    setLoading(true)
     const form = formRef.current;
     const firstName = form.elements["firstname"].value;
     const lastName = form.elements["lastname"].value;
@@ -40,6 +43,7 @@ const Contact = () => {
           description: "Something went wrong please try again.",
         });
       }
+      setLoading(false)
     }
   };
 
@@ -100,8 +104,10 @@ const Contact = () => {
                 onClick={(e) => {
                   formSubmit();
                 }}
+                disabled={loading}
               >
-                Send Message
+                {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                {loading ? "Loading..." : "Send Message"}
               </Button>
             </form>
           </div>
