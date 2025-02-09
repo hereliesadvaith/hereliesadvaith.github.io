@@ -1,6 +1,8 @@
 "use client";
+import MarkdownArea from "@/components/MarkdownArea";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const works = [
@@ -71,17 +73,26 @@ const Work = () => {
     );
   } else {
     return (
-      <div>
-        <Button
-          onClick={() => {
-            onBack();
-          }}
-          className="border border-accent-default cursor-pointer"
-        >
-          Back
-        </Button>
-        <h1>Blog: {hash}</h1>
-      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 0.4, duration: 0.8, ease: "easeIn" },
+        }}
+        className="py-6"
+      >
+        <div className="container mx-auto">
+          <Button
+            onClick={() => {
+              onBack();
+            }}
+            className="border border-accent-default cursor-pointer"
+          >
+            Back
+          </Button>
+          <MarkdownArea />
+        </div>
+      </motion.div>
     );
   }
 };
