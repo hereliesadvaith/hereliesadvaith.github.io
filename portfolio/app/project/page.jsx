@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const Work = () => {
+const Project = () => {
   const works = [
     {
       id: 1,
@@ -90,11 +90,11 @@ const Work = () => {
           >
             Back
           </Button>
-          <MarkdownArea />
+          <MarkdownArea link={hash}/>
         </div>
       </motion.div>
     );
   }
 };
 
-export default Work;
+export default Project;
