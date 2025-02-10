@@ -30,7 +30,6 @@ const Project = () => {
 
   useEffect(() => {
     const updateHash = () => {
-      console.log("update hash called");
       setHash(window.location.hash.slice(1));
     };
     updateHash();
@@ -90,7 +89,7 @@ const Project = () => {
           >
             Back
           </Button>
-          <MarkdownArea link={hash}/>
+          <MarkdownArea link={hash} />
         </div>
       </motion.div>
     );

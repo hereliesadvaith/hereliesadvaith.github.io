@@ -15,3 +15,9 @@ npm i framer-motion
 ```bash
 npm i react-icons
 ```
+```bash
+npm i react-markdown
+```
+```bash
+npm i react-syntax-highlighter
+```
