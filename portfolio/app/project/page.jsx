@@ -3,41 +3,27 @@ import MarkdownArea from "@/components/MarkdownArea";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import ListView from "@/components/ListView";
 
 const Project = () => {
-  const works = [
-    {
-      id: 1,
-      title: "Odoo",
-      description:
-        "This repository contains a collection of custom applications developed for Odoo, an open-source enterprise resource planning (ERP) system.",
-    },
-    {
-      id: 2,
-      title: "Quick Budget",
-      description:
-        "This is a budget management app built using Owl.JS for the frontend and Django for the backend. The app allows users to create, read, update, and delete expenses of their day to day life. The app is built with a responsive and intuitive user interface using Owl.JS and a robust backend using Django and Django Rest Framework.",
-    },
-    {
-      id: 3,
-      title: "Keeper",
-      description:
-        "This is a project management app built using React for the frontend and Django for the backend. The app allows users to create, read, update, and delete notes related to their projects. The app is built with a responsive and intuitive user interface using React and a robust backend using Django and Django Rest Framework.",
-    },
-  ];
-
+  const link =
+    "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/blogs.json";
   const [hash, setHash] = useState("");
+  const [blogs, setBlogs] = useState([]);
 
-  useEffect(() => {
-    const updateHash = () => {
-      setHash(window.location.hash.slice(1));
-    };
-    updateHash();
-    window.addEventListener("hashchange", updateHash);
-    return () => {
-      window.removeEventListener("hashchange", updateHash);
-    };
-  }, []);
+  const updateHash = () => {
+    setHash(window.location.hash.slice(1));
+  };
+
+  const fetchBlogs = async () => {
+    try {
+      const res = await fetch(link);
+      const json = await res.json();
+      setBlogs(json);
+    } catch (error) {
+      console.error("Failed to fetch json:", error);
+    }
+  };
 
   const onOpen = (id) => {
     window.location.hash = id;
@@ -49,27 +35,17 @@ const Project = () => {
     setHash("");
   };
 
+  useEffect(() => {
+    updateHash();
+    fetchBlogs();
+    window.addEventListener("hashchange", updateHash);
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+    };
+  }, []);
+
   if (!hash) {
-    return (
-      <div>
-        {works.map((item, index) => {
-          return (
-            <div key={index} className="mb-10 ml-10">
-              <h1>{item.title}</h1>
-              <p>{item.description}</p>
-              <Button
-                onClick={() => {
-                  onOpen(item.id);
-                }}
-                className="border border-accent-default cursor-pointer"
-              >
-                Open
-              </Button>
-            </div>
-          );
-        })}
-      </div>
-    );
+    return <ListView records={blogs} handleOpen={onOpen} />;
   } else {
     return (
       <motion.div
