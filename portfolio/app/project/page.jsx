@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ListView from "@/components/ListView";
+import Image from "next/image";
 
 const Project = () => {
   const link =
@@ -45,7 +46,26 @@ const Project = () => {
   }, []);
 
   if (!hash) {
-    return <ListView records={blogs} handleOpen={onOpen} />;
+    return (
+      <div className="container mx-auto">
+        <div className="flex flex-col xl:flex-row items-center mb-10 xl:mb-15 xl:mt-5 justify-between p-10">
+          <div className="hidden xl:flex">
+            <h1 className="h1 text-accent-default">Projects</h1>
+          </div>
+          <div className="mix-blend-lighten w-[400px] h-[400px] relative">
+            <Image
+              src="/assets/project/laptop.png"
+              priority
+              quality={100}
+              fill
+              alt=""
+              className="object-contain"
+            />
+          </div>
+        </div>
+        <ListView records={blogs} handleOpen={onOpen} />
+      </div>
+    );
   } else {
     return (
       <motion.div

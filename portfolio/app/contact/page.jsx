@@ -12,7 +12,7 @@ const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
   const formSubmit = async () => {
-    setLoading(true)
+    setLoading(true);
     const form = formRef.current;
     const firstName = form.elements["firstname"].value;
     const lastName = form.elements["lastname"].value;
@@ -43,7 +43,9 @@ const Contact = () => {
           description: "Something went wrong please try again.",
         });
       }
-      setLoading(false)
+      setLoading(false);
+    } else {
+      setLoading(false);
     }
   };
 
