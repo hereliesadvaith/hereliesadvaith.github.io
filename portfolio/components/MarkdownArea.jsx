@@ -4,9 +4,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const MarkdownArea = ({ link }) => {
-  link =
-    "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/deploying-with-docker.md";
+const MarkdownArea = ({ link, domain }) => {
+  link = domain + link + ".md";
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {

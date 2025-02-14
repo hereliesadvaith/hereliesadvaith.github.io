@@ -48,11 +48,11 @@ const Project = () => {
   if (!hash) {
     return (
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row items-center mb-10 xl:mb-15 xl:mt-5 justify-between p-10">
-          <div className="hidden xl:flex">
+        <div className="flex flex-col xl:flex-row items-center justify-between p-5">
+          <div className="">
             <h1 className="h1 text-accent-default">Projects</h1>
           </div>
-          <div className="mix-blend-lighten w-[400px] h-[400px] relative">
+          <div className="mix-blend-lighten w-[400px] h-[400px] relative hidden xl:flex">
             <Image
               src="/assets/project/laptop.png"
               priority
@@ -85,7 +85,12 @@ const Project = () => {
           >
             Back
           </Button>
-          <MarkdownArea link={hash} />
+          <MarkdownArea
+            link={hash}
+            domain={
+              "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/"
+            }
+          />
         </div>
       </motion.div>
     );
