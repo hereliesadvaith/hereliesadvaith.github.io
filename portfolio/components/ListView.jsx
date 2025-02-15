@@ -12,7 +12,11 @@ const ListView = ({ records, handleOpen }) => {
                   {item.title}
                 </h3>
                 <div className="flex items-center gap-3">
-                  <p className="text-white/60">{item.description}</p>
+                  <p className="text-white/60">
+                    {item.description.length > 90
+                      ? item.description.slice(0, 90) + "..."
+                      : item.description}
+                  </p>
                 </div>
               </li>
             </div>

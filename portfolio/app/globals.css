@@ -26,9 +26,20 @@
     @apply text-[48px] xl:text-[24px] leading-[1.1] font-bold;
   }
   .markdown h1 {
-    @apply text-[28px] xl:text-[36px] font-bold border-b-3 border-accent-default mb-8
+    @apply text-[28px] xl:text-[36px] font-bold border-b-3 border-accent-default mb-8;
   }
   .markdown p {
-    @apply text-white/80
+    @apply text-white/80;
+  }
+  .markdown h2 {
+    @apply text-[22px] xl:text-[28px] font-semibold text-accent-default mt-10 mb-4;
+  }
+
+  .markdown ul {
+    @apply list-disc list-inside pl-4 mb-6;
+  }
+
+  .markdown li {
+    @apply text-white/80 mb-2;
   }
 }

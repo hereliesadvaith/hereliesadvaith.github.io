@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Project = () => {
   const link =
-    "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/blogs.json";
+    "https://raw.githubusercontent.com/hereliesadvaith/Project/refs/heads/main/projects.json";
   const [hash, setHash] = useState("");
   const [blogs, setBlogs] = useState([]);
 
@@ -55,7 +55,6 @@ const Project = () => {
           <div className="mix-blend-lighten w-[400px] h-[400px] relative hidden xl:flex">
             <Image
               src="/assets/project/laptop.png"
-              priority
               quality={100}
               fill
               alt=""
@@ -88,7 +87,7 @@ const Project = () => {
           <MarkdownArea
             link={hash}
             domain={
-              "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/"
+              "https://raw.githubusercontent.com/hereliesadvaith/Project/refs/heads/main/"
             }
           />
         </div>
