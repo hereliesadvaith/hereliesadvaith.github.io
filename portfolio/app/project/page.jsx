@@ -10,17 +10,17 @@ const Project = () => {
   const link =
     "https://raw.githubusercontent.com/hereliesadvaith/Project/refs/heads/main/projects.json";
   const [hash, setHash] = useState("");
-  const [blogs, setBlogs] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   const updateHash = () => {
     setHash(window.location.hash.slice(1));
   };
 
-  const fetchBlogs = async () => {
+  const fetchProjects = async () => {
     try {
       const res = await fetch(link);
       const json = await res.json();
-      setBlogs(json);
+      setProjects(json);
     } catch (error) {
       console.error("Failed to fetch json:", error);
     }
@@ -38,7 +38,7 @@ const Project = () => {
 
   useEffect(() => {
     updateHash();
-    fetchBlogs();
+    fetchProjects();
     window.addEventListener("hashchange", updateHash);
     return () => {
       window.removeEventListener("hashchange", updateHash);
@@ -62,7 +62,7 @@ const Project = () => {
             />
           </div>
         </div>
-        <ListView records={blogs} handleOpen={onOpen} />
+        <ListView records={projects} handleOpen={onOpen} />
       </div>
     );
   } else {
