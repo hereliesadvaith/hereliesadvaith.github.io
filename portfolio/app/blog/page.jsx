@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Blog = () => {
   const link =
-    "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/blogs.json";
+    "https://raw.githubusercontent.com/hereliesadvaith/hereliesadvaith.github.io/refs/heads/main/data/blog/blogs.json";
   const [hash, setHash] = useState("");
   const [blogs, setBlogs] = useState([]);
 
@@ -87,7 +87,7 @@ const Blog = () => {
           <MarkdownArea
             link={hash}
             domain={
-              "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/"
+              "https://raw.githubusercontent.com/hereliesadvaith/hereliesadvaith.github.io/refs/heads/main/data/blog/"
             }
           />
         </div>
