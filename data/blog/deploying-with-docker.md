@@ -9,3 +9,22 @@ Docker encourages a microservices architecture, where each part of the system ca
 From a DevOps perspective, Docker allows easier automation in CI/CD pipelines. When new code is pushed to a repository, a Docker image can be built and deployed automatically. This leads to faster release cycles and more reliable updates.
 
 What makes Docker truly powerful is its ability to integrate with any platform. You can deploy to cloud services, private servers, or even run your containers locally for testing. With minimal configuration, Docker enables a consistent and repeatable deployment strategy that can scale with your application's needs.
+
+```bash
+docker pull debian
+```
+
+```javascript
+const greet = (name) => {
+  return `Hello, ${name}`;
+};
+console.log(greet("Advaith"));
+```
+
+```python
+def greet(name):
+  return f'Hello {name}'
+greet('Advaith')
+```
+
+

@@ -2,26 +2,26 @@
   {
     "title": "WebDAV Server",
     "description": "A comprehensive guide to setting up a WebDAV server using Docker.",
-    "link": "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/webdav-server.md"
+    "link": "webdav-server"
   },
   {
     "title": "Deploying with Docker",
     "description": "Step-by-step instructions for containerizing and deploying your app using Docker.",
-    "link": "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/deploying-with-docker.md"
+    "link": "deploying-with-docker"
   },
   {
     "title": "Understanding OAuth2",
     "description": "An introduction to OAuth2 authentication in web applications and backend.",
-    "link": "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/understanding-oauth2.md"
+    "link": "understanding-oauth2"
   },
   {
     "title": "REST API with FastAPI",
     "description": "Learn how to quickly build a modern REST API using FastAPI in Python.",
-    "link": "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/rest-api-with-fastapi.md"
+    "link": "rest-api-with-fastapi"
   },
   {
     "title": "GitHub Actions for CI/CD",
     "description": "Automate your build and deployment pipelines using GitHub Actions explained.",
-    "link": "https://raw.githubusercontent.com/hereliesadvaith/Blog/refs/heads/main/github-actions-cicd.md"
+    "link": "github-actions-cicd"
   }
 ]
