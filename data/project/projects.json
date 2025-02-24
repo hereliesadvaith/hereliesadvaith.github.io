@@ -1,32 +1,8 @@
 [
   {
-    "title": "Algorithmic Trading Bot with Backtesting Dashboard",
-    "description": "A smart trading platform that enables backtesting of strategies and automated trading on live markets.",
-    "link": "algorithmic_trading_bot"
-  },
-  {
-    "title": "Personal Knowledge Hub with AI Summarization",
-    "description": "A personal note-taking app that uses AI to summarize, tag, and search notes intelligently — ideal for second-brain productivity.",
-    "link": "ai_note_summarizer"
-  },
-  {
-    "title": "Developer-Focused SaaS App: API Usage Tracker",
-    "description": "A SaaS product that allows developers to generate API keys, track usage, and receive real-time analytics and alerts.",
-    "link": "api_usage_tracker_saas"
-  },
-  {
-    "title": "Odoo-powered eCommerce with Headless React Frontend",
-    "description": "A modular eCommerce solution where Odoo handles the backend logic (inventory, orders) and React delivers a modern, fast frontend experience.",
-    "link": "headless_odoo_ecommerce"
-  },
-  {
-    "title": "Intelligent CRM with Lead Scoring & Automation",
-    "description": "An enhanced CRM that uses machine learning to score leads and automate communication workflows.",
-    "link": "intelligent_crm"
-  },
-  {
-    "title": "AI-Powered Resume Parser & Job Matcher",
-    "description": "This project uses NLP to extract structured data from resumes and match them to job descriptions based on semantic similarity.",
-    "link": "resume_parser_matcher"
+    "title": "AI Chatbot with Odoo, LangChain & GraphQL",
+    "description": "AI chatbot integrated into Odoo using LangChain, MCP, and GraphQL for smart tool-calling, faster data access, and multi-model support.",
+    "link": "ai_chatbot_odoo",
+    "id": "P01"
   }
 ]
