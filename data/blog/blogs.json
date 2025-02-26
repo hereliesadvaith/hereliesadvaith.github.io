@@ -1,27 +1,8 @@
 [
   {
-    "title": "WebDAV Server",
-    "description": "A comprehensive guide to setting up a WebDAV server using Docker.",
-    "link": "webdav-server"
-  },
-  {
-    "title": "Deploying with Docker",
-    "description": "Step-by-step instructions for containerizing and deploying your app using Docker.",
-    "link": "deploying-with-docker"
-  },
-  {
-    "title": "Understanding OAuth2",
-    "description": "An introduction to OAuth2 authentication in web applications and backend.",
-    "link": "understanding-oauth2"
-  },
-  {
-    "title": "REST API with FastAPI",
-    "description": "Learn how to quickly build a modern REST API using FastAPI in Python.",
-    "link": "rest-api-with-fastapi"
-  },
-  {
-    "title": "GitHub Actions for CI/CD",
-    "description": "Automate your build and deployment pipelines using GitHub Actions explained.",
-    "link": "github-actions-cicd"
+    "title": "Turn Your Server into a WebDAV Server: A Step-by-Step Guide",
+    "description": "Learn how to easily set up and configure your own WebDAV server for secure file sharing and remote access.",
+    "link": "webdav_server",
+    "id": "B01"
   }
 ]
