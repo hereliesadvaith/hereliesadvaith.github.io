@@ -9,14 +9,14 @@ const Header = () => {
           href="/"
           className="text-[17px] xl:text-[20px] font-medium tracking-[-0.03em]"
         >
-          advaith
+          advaith.
         </Link>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-1.5 bg-ink text-paper text-[15px] xl:text-[17px] font-medium tracking-[-0.02em] px-2.5 py-1.5 rounded-[3px] hover:opacity-85 transition-opacity"
+          className="group inline-flex items-center gap-1.5 bg-ink text-paper text-[15px] xl:text-[17px] font-medium tracking-[-0.02em] px-2.5 py-1.5 rounded-[3px] hover:opacity-90 transition-opacity"
         >
           Get in touch
-          <FiArrowUpRight className="text-[1.1em]" />
+          <FiArrowUpRight className="text-[1.1em] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </Link>
       </div>
     </header>
