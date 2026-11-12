@@ -1,12 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { CgSpinner } from "react-icons/cg";
 import { toast } from "sonner";
-import { motion } from "framer-motion";
 
 const Contact = () => {
   const formRef = useRef();
@@ -29,12 +25,18 @@ const Contact = () => {
         phone: phone,
         email: email,
       };
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: JSON.stringify(payload),
-      });
-      const result = await response.json();
+      let result = {};
+      try {
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          body: JSON.stringify(payload),
+        });
+        result = await response.json();
+      } catch (error) {
+        console.error("Failed to send message:", error);
+      }
       if (result.result === "success") {
+        formRef.current.reset();
         toast("Success", {
           description: "Your request was completed successfully.",
         });
@@ -49,73 +51,52 @@ const Contact = () => {
     }
   };
 
+  const field =
+    "w-full bg-transparent border-0 border-b border-line rounded-none px-0 py-3 text-[17px] placeholder:text-muted focus:outline-none focus:border-ink transition-colors";
+
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="py-6"
+    <section className="px-4 xl:px-10 pt-10 xl:pt-16 pb-24"
     >
-      <div className="container mx-auto">
-        <div className="mx-auto">
-          {/* Form */}
-          <div className="xl:h-[54%] xl:w-[60%] mx-auto">
-            <form
-              ref={formRef}
-              onSubmit={(e) => e.preventDefault()}
-              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
-            >
-              <h3 className="text-4xl text-accent-default">
-                Let's work together
-              </h3>
-              <p className="text-white/60">
-                I’m open to freelance work, collaborations, or full-time
-                opportunities. Drop a message and I’ll get back to you soon.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input
-                  name="firstname"
-                  type="firstname"
-                  placeholder="First Name"
-                  required
-                />
-                <Input
-                  name="lastname"
-                  type="lastname"
-                  placeholder="Last Name"
-                />
-                <Input
-                  name="email"
-                  type="email"
-                  placeholder="Email Address"
-                  required
-                />
-                <Input name="phone" type="phone" placeholder="Phone Number" />
-              </div>
-              <Textarea
-                name="message"
-                placeholder="Your Message"
-                className="h-[200px]"
-              />
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase border-2 border-accent-default cursor-pointer hover:bg-accent-default hover:text-primary hover:transition-all duration-500 max-w-40"
-                onClick={(e) => {
-                  formSubmit();
-                }}
-                disabled={loading}
-              >
-                {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                {loading ? "Loading..." : "Send Message"}
-              </Button>
-            </form>
-          </div>
+      <div className="grid xl:grid-cols-2 gap-12">
+        <div>
+          <p className="eyebrow mb-4">Contact</p>
+          <h1 className="h1">Let's work together</h1>
+          <p className="mt-6 max-w-[420px] text-[18px] leading-snug text-muted">
+            I'm open to freelance work, collaborations and full-time roles.
+            Drop a message and I'll get back to you soon.
+          </p>
         </div>
+        <form
+          ref={formRef}
+          onSubmit={(e) => {
+            e.preventDefault();
+            formSubmit();
+          }}
+          className="flex flex-col gap-4 max-w-[560px]"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4">
+            <input name="firstname" placeholder="First name *" required className={field} />
+            <input name="lastname" placeholder="Last name" className={field} />
+            <input name="email" type="email" placeholder="Email *" required className={field} />
+            <input name="phone" type="tel" placeholder="Phone" className={field} />
+          </div>
+          <textarea
+            name="message"
+            placeholder="Your message"
+            rows={6}
+            className={`${field} resize-none`}
+          />
+          <button
+            type="submit"
+            disabled={loading}
+            className="mt-4 self-start inline-flex items-center gap-2 bg-ink text-paper text-[17px] font-medium px-4 py-2 rounded-[3px] hover:opacity-85 transition-opacity disabled:opacity-50 cursor-pointer"
+          >
+            {loading && <CgSpinner className="h-4 w-4 animate-spin" />}
+            {loading ? "Sending..." : "Send message"}
+          </button>
+        </form>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

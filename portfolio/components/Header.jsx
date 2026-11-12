@@ -1,33 +1,23 @@
 import Link from "next/link";
-
-// Components
-import { Button } from "@/components/ui/button";
-import Nav from "@/components/Nav";
-import MobileNav from "@/components/MobileNav";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12">
-      <div className="container mx-auto flex items-center justify-between">
-        <Link href="/" className="text-4xl font-semibold">
-          Advaith<span className="text-accent-default">.</span>
+    <header className="relative z-10">
+      <div className="px-4 xl:px-10 py-5 xl:py-8 flex items-center justify-between gap-4">
+        <Link
+          href="/"
+          className="text-[17px] xl:text-[20px] font-medium tracking-[-0.03em]"
+        >
+          advaith
         </Link>
-        {/* Desktop Nav */}
-        <div className="hidden xl:flex itemes-center gap-8">
-          <Nav />
-          <Link href="/contact">
-            <Button
-              variant="outline"
-              className="border-2 border-accent-default cursor-pointer hover:bg-accent-default hover:text-primary hover:transition-all duration-500"
-            >
-              Hire Me!
-            </Button>
-          </Link>
-        </div>
-        {/* Mobile Nav */}
-        <div className="xl:hidden">
-          <MobileNav />
-        </div>
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-1.5 bg-ink text-paper text-[15px] xl:text-[17px] font-medium tracking-[-0.02em] px-2.5 py-1.5 rounded-[3px] hover:opacity-85 transition-opacity"
+        >
+          Get in touch
+          <FiArrowUpRight className="text-[1.1em]" />
+        </Link>
       </div>
     </header>
   );

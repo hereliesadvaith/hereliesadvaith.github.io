@@ -1,8 +1,0 @@
-[
-  {
-    "title": "AI Chatbot with Odoo, LangChain & GraphQL",
-    "description": "AI chatbot integrated into Odoo using LangChain, MCP, and GraphQL for smart tool-calling, faster data access, and multi-model support.",
-    "link": "ai_chatbot_odoo",
-    "id": "P01"
-  }
-]
